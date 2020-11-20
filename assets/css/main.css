@@ -1,0 +1,469 @@
+@import "normalize.css";
+@font-face {
+    font-family: "gotham-med";
+    src: url("../fonts/GothamMedium.otf");
+}
+@font-face {
+    font-family: "gotham-reg";
+    src: url("../fonts/GothamBookRegular.otf");
+}
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.app-container {
+    width: 100%;
+    min-height: 250px;
+}
+.app-container .header-box {
+    width: 100%;
+    background: #f0f0f0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.app-container .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    height: 56px;
+    padding: 0 25px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.app-container .app-header .app-burger-menu__btn {
+    display: flex;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -8px;
+    margin-right: 8px;
+}
+.app-container .app-header .app-burger-menu__btn .close-icon {
+    display: none;
+}
+.app-container .app-header .app-burger-menu__btn svg {
+    width: 16px;
+    height: 16px;
+}
+.app-container .app-header h1 {
+    margin: 0;
+}
+.app-container .app-header h1 a {
+    text-decoration: none;
+}
+.app-container .app-header h1 a img {
+    max-width: 129px;
+}
+.app-container .app-header .app-lang-switcher {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.app-container .app-header .app-lang-switcher .selected-lang {
+    display: flex;
+    align-items: center;
+    font-family: "gotham-med";
+    font-size: 14px;
+}
+.app-container .app-header .app-lang-switcher .selected-lang .arrow-down svg {
+    width: 15px;
+    height: 13px;
+    margin-left: 4px;
+}
+.app-container .app-body {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+.app-container .app-body .wellcome-message {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.app-container .app-body .wellcome-message h2 {
+    width: 100%;
+    color: #393939;
+    font-size: 19px;
+    font-family: "gotham-med";
+    text-align: center;
+    margin: 0;
+}
+.app-container .app-body .wellcome-message p {
+    font-family: "gotham-reg";
+    color: #393939;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.app-container .app-body .service-buttons {
+    display: flex;
+    width: calc(100% - 50px);
+    flex-wrap: wrap;
+    padding: 0 25px;
+    margin-top: 28px;
+}
+.app-container .app-body .service-buttons .service-buttons__item {
+    width: 100%;
+    margin-bottom: 18px;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper {
+    display: inline-block;
+    width: 100%;
+    display: none;
+    margin-top: 18px;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn {
+    width: calc(100% / 2 - 8px);
+    margin-right: 16px;
+    float: left;
+    position: relative;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn:last-child {
+    margin-right: 0;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.app-container .app-body .service-buttons .service-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(181, 181, 181, 0.5);
+    background-color: #ffffff;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    font-family: "gotham-med";
+    font-size: 16px;
+    transition: all 0.3s;
+}
+.app-container .app-body .service-buttons .service-btn:focus {
+    outline: none;
+}
+.app-container .app-body .service-buttons input:hover .service-btn svg {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons input:hover + .service-btn {
+    background: rgba(0, 0, 0, 0.85);
+    transition: all 0.3s;
+    color: #fff;
+}
+.app-container .app-body .service-buttons input:hover + .service-btn svg {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons input:hover + .service-btn svg * {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons .service-btn .icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 18px;
+    display: inline-block;
+}
+.app-container .app-body .service-buttons .service-btn.active {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
+.app-container .app-body .service-buttons .service-btn.active svg {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons .service-btn.active svg * {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons .service-btn .icon svg {
+    width: 30px;
+    height: 30px;
+}
+.app-container .app-body .service-buttons .service-btn .txt {
+    display: inline-block;
+}
+.app-container .app-body .service-buttons .service-btn .txt span {
+    display: inline-block;
+    width: 100%;
+    font-family: "gotham-reg";
+    font-size: 13px;
+    margin-top: 2px;
+}
+.app-container .app-body .service-buttons .service-item[disabled="disabled"] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.app-container .app-body .service-buttons .service-item {
+    position: relative;
+    width: 100%;
+}
+.app-container .app-body .service-buttons .service-item input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.app-container .app-body .service-buttons .service-item input:checked + .service-btn {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
+.app-container .app-body .service-buttons .service-item input:checked + .service-btn svg {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons .service-item input:checked + .service-btn svg * {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn input:checked + .service-btn {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn input:checked + .service-btn svg {
+    fill: #fff !important;
+}
+.app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn input:checked + .service-btn svg * {
+    fill: #fff !important;
+}
+.app-container .app-body .locations-wrapper {
+    padding: 15px 25px;
+}
+.app-container .app-body .locations-wrapper h3 {
+    margin: 0;
+    color: #393939;
+    font-size: 16px;
+    font-family: "gotham-reg";
+    width: 100%;
+    text-align: center;
+}
+.app-container .app-body .locations-wrapper .locations-listing {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item {
+    display: flex;
+    width: calc(100% - 30px);
+    padding: 15px;
+    border: solid 1px #919191;
+    background-color: #fbfbfb;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    position: relative;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header .checker {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #919191;
+    border-radius: 100%;
+    margin-right: 8px;
+    position: relative;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header input:checked + .checker .check-bullet {
+    width: 14px;
+    height: 14px;
+    background: #333333;
+    border-radius: 100%;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item.active {
+    border-radius: 6px;
+    border-color: transparent;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item.active:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    border: 2px solid #000;
+    border-radius: 6px;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header input:checked + .checker:before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 0px);
+    top: -2px;
+    width: calc(100% + 0px);
+    left: -2px;
+    border: 2px solid #333;
+    border-radius: 100%;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header input:checked + .checker {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px transparent;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__header .title {
+    color: #333333;
+    font-size: 14px;
+    font-family: "gotham-reg";
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__body {
+    width: 100%;
+    margin-top: 18px;
+    display: none;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__body .info-item-row {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__body .info-item-row .label {
+    color: #333333;
+    font-size: 14px;
+    font-family: "gotham-med";
+    margin-bottom: 5px;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__body .info-item-row .value {
+    color: #333333;
+    font-size: 14px;
+    font-family: "gotham-reg";
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__body .info-item-row .value iframe {
+    width: 100%;
+    height: 175px;
+}
+.app-container .app-body .locations-wrapper .locations-listing .location-item .location-item__body .info-item-row:last-child {
+    margin-bottom: 0;
+}
+
+.app-container .app-body .locations-wrapper .confirm-btn {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 60px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "gotham-med";
+    font-size: 14px;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+.app-container .app-body .locations-wrapper .confirm-btn:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transition: all 0.3s;
+}
+
+.app-container .app-body .locations-wrapper .confirm-btn:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+@media (max-width: 450px) {
+    .app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn .service-btn {
+        padding-left: 50px;
+        font-size: 14px;
+    }
+    .app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn .service-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+    .app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn .service-btn .value {
+        position: relative;
+        top: 1px;
+    }
+    .app-container .app-body .service-buttons .service-buttons__item .sub-btn-wrapper .service-inner-btn .service-btn .icon {
+        height: 27px;
+    }
+}
+
+.popup-item {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(204, 204, 204, 0.6);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9;
+}
+.popup-item .popup-body {
+    width: 300px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    min-height: 160px;
+
+    padding: 20px;
+}
+.popup-item .popup-body h3 {
+    min-height: 85px;
+
+    color: #000;
+
+    font-size: 14px;
+    font-family: "gotham-med";
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+}
+.popup-item .popup-body .okay-btn {
+    display: inline-flex;
+
+    background: #ebebeb;
+
+    padding: 15px 40px;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    font-family: "gotham-med";
+    transition: all 0.3s;
+}
+.popup-item .popup-body .okay-btn:hover {
+    transition: all 0.3s;
+    background: #dadada;
+}
